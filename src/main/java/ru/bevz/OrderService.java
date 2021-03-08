@@ -156,27 +156,27 @@ public class OrderService {
 	}
 
 	//найти список всех сотрудников и их самых частых действий (пример, если сотрудник 1 выполнил 2 UPDATE и 1 READ - то возвращаем 1 + UPDATE)
-	// TODO
 	public Map<String, ActionType> findEmployeeActions() {
 		Map<String, ActionType> employees = new HashMap<>();
-		Set<String> setEmployees = new HashSet<>();
+		Map<String, Map<ActionType, Integer>> empMerits = new HashMap<>();
 		for (Application app : storage.values()) {
-			if (setEmployees.contains(app.getClientId())) {
-				setEmployees.add(app.getClientId());
-				TreeMap<ActionType, Integer> count = new TreeMap<>();
-				count.put(ActionType.CREATE, 0);
-				count.put(ActionType.UPDATE, 0);
-				count.put(ActionType.READ, 0);
-				count.put(ActionType.DELETE, 0);
-				for (Application appEmp : storage.values()) {
-					if (appEmp.getClientId().equals(app.getClientId())) {
-						for (Action act : app.getActions()) {
-							count.put(act.getActionType(), count.get(act.getActionType()) + 1);
-						}
-					}
+			for (Action act : app.getActions()) {
+				if (!empMerits.containsKey(act.getEmployeeId())) {
+					Map<ActionType, Integer> merits = new EnumMap<>(ActionType.class);
+					for (ActionType at : ActionType.values()) { merits.put(at, 0); }
+					empMerits.put(act.getEmployeeId(), merits);
 				}
-				employees.put(app.getClientId(), count.firstKey());
+				empMerits.get(act.getEmployeeId()).put(act.getActionType(), empMerits.get(act.getEmployeeId()).get(act.getActionType()) + 1);
 			}
+		}
+		for (String emp : empMerits.keySet()) {
+			ActionType max = ActionType.READ;
+			for (ActionType at : empMerits.get(emp).keySet()) {
+				if (empMerits.get(emp).get(max) < empMerits.get(emp).get(at)) {
+					max = at;
+				}
+			}
+			employees.put(emp, max);
 		}
 		return employees;
 	}
