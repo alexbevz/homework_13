@@ -1,46 +1,18 @@
 package ru.bevz;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import lombok.Data;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 
+@Data
 public class OrderService {
-	private final Map<UUID, Application> storage = new HashMap<>();
+	private final Map<UUID, Application> storage;
+	private final String filepath;
 
-	public OrderService() throws IOException {
-		readStorageFromDB();
-	}
-
-	public static void main(String[] args) throws IOException {
-		OrderService os = new OrderService();
-		os.readStorageFromDB();
-		System.out.println(os.findApplicationsByClientId("333333"));
-		System.out.println(os.findApplicationsByActionType(ActionType.DELETE));
-		System.out.println(os.findApplicationsWithoutProducts());
-		System.out.println(os.findClientProducts("111111"));
-		System.out.println(os.findClientsByActionAndProducts());
-		System.out.println(os.findEmployeeActions());
-		System.out.println(os.findNewApplications());
-		System.out.println(os.findProductsByDescription("карта"));
-		System.out.println(os.getActionsByEmployee("first"));
-	}
-
-	public void readStorageFromDB() throws IOException {
-		String filepath = "D:\\Aleksandr\\Study\\IT\\IdeaProjects\\homework_13\\src\\main\\resources\\applications.json";
-		File json = new File(filepath);
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.registerModule(new JavaTimeModule());
-		List<Application> applications = mapper.readValue(json, new TypeReference<List<Application>>() {
-		});
-
-		for (Application app : applications) {
-			storage.put(app.getId(), app);
-		}
+	public OrderService() {
+		filepath = "D:\\Aleksandr\\Study\\IT\\IdeaProjects\\homework_13\\src\\main\\resources\\applications.json";
+		storage = LoaderService.readStorageFromDB(filepath);
 	}
 
 	//найти все заявки по clientId
@@ -98,7 +70,7 @@ public class OrderService {
 
 		for (Application app : storage.values()) {
 			for (Product prod : app.getProducts()) {
-				if (prod.getDescription().indexOf(description) != -1) {
+				if (prod.getDescription().contains(description)) {
 					products.add(prod);
 				}
 			}
@@ -107,19 +79,27 @@ public class OrderService {
 	}
 
 	//найти всех клиентов, у которых отсутствует действие с типом DELETE и количество продуктов более одного
-	// TODO
 	public Set<String> findClientsByActionAndProducts() {
 		Set<String> clients = new HashSet<>();
+		Map<String, Integer> countProd = new HashMap<>();
 		for (Application app : storage.values()) {
-			if (app.getProducts().size() > 1) {
-				for (Action act : app.getActions()) {
-					if (!act.getActionType().equals(ActionType.DELETE)) {
-						clients.add(app.getClientId());
-						break;
-					}
+			if (!countProd.containsKey(app.getClientId())) {
+				countProd.put(app.getClientId(), 0);
+				clients.add(app.getClientId());
+			}
+			countProd.put(app.getClientId(), countProd.get(app.getClientId()) + app.getProducts().size());
+			for (Action act : app.getActions()) {
+				if (act.getActionType().equals(ActionType.DELETE)) {
+					clients.remove(app.getClientId());
 				}
 			}
 		}
+		for (Map.Entry<String, Integer> cln : countProd.entrySet()) {
+			if (countProd.get(cln.getKey()) < 2) {
+				clients.remove(cln.getKey());
+			}
+		}
+		//countProd.entrySet().stream().filter(x -> x.getValue() < 2).forEach(x -> clients.remove(x.getKey()));
 		return clients;
 	}
 
@@ -163,20 +143,22 @@ public class OrderService {
 			for (Action act : app.getActions()) {
 				if (!empMerits.containsKey(act.getEmployeeId())) {
 					Map<ActionType, Integer> merits = new EnumMap<>(ActionType.class);
-					for (ActionType at : ActionType.values()) { merits.put(at, 0); }
+					for (ActionType at : ActionType.values()) {
+						merits.put(at, 0);
+					}
 					empMerits.put(act.getEmployeeId(), merits);
 				}
 				empMerits.get(act.getEmployeeId()).put(act.getActionType(), empMerits.get(act.getEmployeeId()).get(act.getActionType()) + 1);
 			}
 		}
-		for (String emp : empMerits.keySet()) {
+		for (Map.Entry<String, Map<ActionType, Integer>> emp : empMerits.entrySet()) {
 			ActionType max = ActionType.READ;
-			for (ActionType at : empMerits.get(emp).keySet()) {
-				if (empMerits.get(emp).get(max) < empMerits.get(emp).get(at)) {
+			for (ActionType at : empMerits.get(emp.getKey()).keySet()) {
+				if (empMerits.get(emp.getKey()).get(max) < empMerits.get(emp.getKey()).get(at)) {
 					max = at;
 				}
 			}
-			employees.put(emp, max);
+			employees.put(emp.getKey(), max);
 		}
 		return employees;
 	}
