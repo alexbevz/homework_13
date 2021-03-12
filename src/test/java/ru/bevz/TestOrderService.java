@@ -1,87 +1,25 @@
 package ru.bevz;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Stream;
 
-
-public class TestOrderService {
-
-	private static Stream<Arguments> provideDataForTestFindApplicationsByClientId() {
-		String filepath = "D:\\Aleksandr\\Study\\IT\\IdeaProjects\\homework_13\\src\\test\\resources\\test1.json";
-		Stream<Arguments> str = Stream.of(Arguments.of(12));
-		List<UUID> data = new ArrayList<UUID>();
-		data.add(UUID.fromString("c21d07e7-fe0f-4226-a974-da447217d949"));
-		return Stream.of(
-						Arguments.of(
-										LoaderService.readStorageFromDB(filepath),
-										"33333",
-										new ArrayList<UUID>()
-						),
-						Arguments.of(
-										LoaderService.readStorageFromDB(filepath),
-										"333333",
-										data
-						)
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestFindApplicationsWithoutProducts() {
-		return Stream.of(
-						Arguments.of()
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestGetActionsByEmployee() {
-		return Stream.of(
-						Arguments.of()
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestFindApplicationsByActionType() {
-		return Stream.of(
-						Arguments.of()
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestFindProductsByDescription() {
-		return Stream.of(
-						Arguments.of()
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestFindClientsByActionAndProducts() {
-		return Stream.of(
-						Arguments.of()
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestFindNewApplications() {
-		return Stream.of(
-						Arguments.of()
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestFindClientProducts() {
-		return Stream.of(
-						Arguments.of()
-		);
-	}
-
-	private static Stream<Arguments> provideDataForTestFindEmployeeActions() {
-		return Stream.of(
-
-		);
-	}
+//TODO: реализовать все тесты для методов класса OrderService
+class TestOrderService {
+	private static final String ERROR_TITLE = "Ошибка";
+	private static final Map<String, List<DataTestOrderService>> data = readDataForTest();
 
 	private static void setAbsolutelyAccessible(Field field) {
 		try {
@@ -94,19 +32,61 @@ public class TestOrderService {
 		}
 	}
 
+	private static Map<String, List<DataTestOrderService>> readDataForTest() {
+		File json = new File(LoaderService.getValueFromConfigByKey("file-test.path"));
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.registerModule(new JavaTimeModule());
+		try {
+			//TODO: решить проблему чтения всех файлов,
+			return mapper.readValue(
+							json,
+							new TypeReference<Map<String, List<DataTestOrderService>>>() {
+							}
+			);
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(
+							null,
+							"Файл отсутствует или нет прав доступа!\nВернётся new HashMap<>()!",
+							ERROR_TITLE,
+							JOptionPane.ERROR_MESSAGE
+			);
+		}
+		return new HashMap<>();
+	}
+
+	private static Stream<Arguments> provideDataForTestFindApplicationsByClientId() {
+		Stream<Arguments> stream = Stream.of();
+		for (DataTestOrderService data : data.get(Thread.currentThread().getStackTrace()[1].getMethodName())) {
+			stream = Stream.concat(
+							stream,
+							Stream.of(Arguments.of(
+											data.storage,
+											data.expectedResult,
+											data.values.get(0)
+											//TODO: автоматизировать передачу values отдельными значениями аргументов
+							)));
+		}
+		return stream;
+	}
+
 	@ParameterizedTest
 	@MethodSource("provideDataForTestFindApplicationsByClientId")
-	public void TestFindApplicationsByClientId(HashMap<UUID, Application> storage, String value, ArrayList<UUID> expected) throws Exception {
+	void TestFindApplicationsByClientId(
+					HashMap<UUID, Application> storage,
+					ArrayList<Object> expected,
+					String clientId
+	) throws Exception {
 		OrderService orderService = new OrderService();
 		Field fieldStorage = orderService.getClass().getDeclaredField("storage");
-		setAbsolutelyAccessible(fieldStorage);
 
+		setAbsolutelyAccessible(fieldStorage);
 		fieldStorage.set(orderService, storage);
 
-		List<UUID> listUUID = new ArrayList<>();
-		for (Application app : orderService.findApplicationsByClientId(value)) {
-			listUUID.add(app.getId());
+		List<String> listUUID = new ArrayList<>();
+		for (Application app : orderService.findApplicationsByClientId(clientId)) {
+			listUUID.add(app.getId().toString());
 		}
-		Assertions.assertEquals(listUUID, expected);
+
+		Assertions.assertEquals(expected, listUUID);
 	}
 }

@@ -8,11 +8,9 @@ import java.util.*;
 @Data
 public class OrderService {
 	private final Map<UUID, Application> storage;
-	private final String filepath;
 
 	public OrderService() {
-		filepath = "D:\\Aleksandr\\Study\\IT\\IdeaProjects\\homework_13\\src\\main\\resources\\applications.json";
-		storage = LoaderService.readStorageFromDB(filepath);
+		storage = LoaderService.readStorageFromDB(LoaderService.getDBPath());
 	}
 
 	//найти все заявки по clientId
@@ -53,6 +51,7 @@ public class OrderService {
 	//найти все заявки у которых есть Action с указанным типом
 	public List<Application> findApplicationsByActionType(ActionType actionType) {
 		List<Application> applications = new ArrayList<>();
+
 		for (Application app : storage.values()) {
 			for (Action act : app.getActions()) {
 				if (act.getActionType().equals(actionType)) {
@@ -82,6 +81,7 @@ public class OrderService {
 	public Set<String> findClientsByActionAndProducts() {
 		Set<String> clients = new HashSet<>();
 		Map<String, Integer> countProd = new HashMap<>();
+
 		for (Application app : storage.values()) {
 			if (!countProd.containsKey(app.getClientId())) {
 				countProd.put(app.getClientId(), 0);
@@ -99,7 +99,6 @@ public class OrderService {
 				clients.remove(cln.getKey());
 			}
 		}
-		//countProd.entrySet().stream().filter(x -> x.getValue() < 2).forEach(x -> clients.remove(x.getKey()));
 		return clients;
 	}
 
@@ -113,7 +112,11 @@ public class OrderService {
 				if (act.getActionType().equals(ActionType.DELETE)) {
 					flagDelete = true;
 					break;
-				} else if (!flagCreate && act.getExecutionTime().equals(LocalDate.now().minusWeeks(1)) && act.getActionType().equals(ActionType.CREATE)) {
+				} else if (
+								!flagCreate
+												&& act.getExecutionTime().equals(LocalDate.now().minusWeeks(1))
+												&& act.getActionType().equals(ActionType.CREATE)
+				) {
 					flagCreate = true;
 				}
 			}
@@ -141,14 +144,9 @@ public class OrderService {
 		Map<String, Map<ActionType, Integer>> empMerits = new HashMap<>();
 		for (Application app : storage.values()) {
 			for (Action act : app.getActions()) {
-				if (!empMerits.containsKey(act.getEmployeeId())) {
-					Map<ActionType, Integer> merits = new EnumMap<>(ActionType.class);
-					for (ActionType at : ActionType.values()) {
-						merits.put(at, 0);
-					}
-					empMerits.put(act.getEmployeeId(), merits);
-				}
-				empMerits.get(act.getEmployeeId()).put(act.getActionType(), empMerits.get(act.getEmployeeId()).get(act.getActionType()) + 1);
+				String employId = act.getEmployeeId();
+				addEmpMerits(empMerits, employId);
+				empMerits.get(employId).put(act.getActionType(), empMerits.get(employId).get(act.getActionType()) + 1);
 			}
 		}
 		for (Map.Entry<String, Map<ActionType, Integer>> emp : empMerits.entrySet()) {
@@ -161,5 +159,15 @@ public class OrderService {
 			employees.put(emp.getKey(), max);
 		}
 		return employees;
+	}
+
+	private void addEmpMerits(Map<String, Map<ActionType, Integer>> empMerits, String employeeId) {
+		if (!empMerits.containsKey(employeeId)) {
+			Map<ActionType, Integer> merits = new EnumMap<>(ActionType.class);
+			for (ActionType at : ActionType.values()) {
+				merits.put(at, 0);
+			}
+			empMerits.put(employeeId, merits);
+		}
 	}
 }
