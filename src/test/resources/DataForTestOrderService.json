@@ -1,0 +1,2201 @@
+{
+  "provideDataForTestFindApplicationsByClientId": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ],
+      "values": {
+        "clientId": "33333"
+      }
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "c21d07e7-fe0f-4226-a974-da447217d949"
+      ],
+      "values": {
+        "clientId": "333333"
+      }
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "a75ed09a-c658-439f-9300-9854b3791851",
+        "7847e09d-faff-4889-996d-0ce10a39f508"
+      ],
+      "values": {
+        "clientId": "111111"
+      }
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ],
+      "values": {
+        "clientId": null
+      }
+    }
+  ],
+  "provideDataForTestFindApplicationsWithoutProducts": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+          ]
+        }
+      },
+      "expectedResult": [
+        "a75ed09a-c658-439f-9300-9854b3791851",
+        "7847e09d-faff-4889-996d-0ce10a39f508"
+      ]
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ]
+    }
+  ],
+  "provideDataForTestGetActionsByEmployee": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+        "34daf05b-9de6-4150-8064-84ab45239690",
+        "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+        "d098d999-e229-4b2d-9c87-2804f3737a0f"
+      ],
+      "values": {
+        "employeeId": "first"
+      }
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ],
+      "values": {
+        "employeeId": "second"
+      }
+    }
+  ],
+  "provideDataForTestFindApplicationsByActionType": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "a75ed09a-c658-439f-9300-9854b3791851",
+        "7847e09d-faff-4889-996d-0ce10a39f508"
+      ],
+      "values": {
+        "actionType": "DELETE"
+      }
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ],
+      "values": {
+        "actionType": "UPDATE"
+      }
+    }
+  ],
+  "provideDataForTestFindProductsByDescription": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+        "5a554bda-3701-4c91-a9bb-99417a9ca98f"
+      ],
+      "values": {
+        "description": "карта"
+      }
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "b1c72050-952a-49a8-8ae1-7ead201bff10",
+              "employeeId": "fifth",
+              "actionType": "DELETE",
+              "executionTime": "2021-02-28"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ],
+      "values": {
+        "description": "ипотека"
+      }
+    }
+  ],
+  "provideDataForTestFindClientsByActionAndProducts": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "333333"
+      ]
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ]
+    }
+  ],
+  "provideDataForTestFindNewApplications": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-11"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-11"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "c21d07e7-fe0f-4226-a974-da447217d949",
+        "7847e09d-faff-4889-996d-0ce10a39f508"
+      ]
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-10"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-03"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ]
+    }
+  ],
+  "provideDataForTestFindClientProducts": [
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-11"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "222222",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-11"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+        "88816ffa-b1ce-4dab-8710-7cd33187911c",
+        "b654680f-b3a0-44aa-8e80-6683bdf8f68d"
+      ],
+      "values": {
+        "clientId": "333333"
+      }
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+            {
+              "actionId": "d94eed3a-2e26-4d50-bfad-80df37b9632c",
+              "employeeId": "second",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-11"
+            },
+            {
+              "actionId": "853ade7c-3587-4a24-aac7-ff9e88f6c96c",
+              "employeeId": "fifth",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-07"
+            },
+            {
+              "actionId": "02a2c9c6-a4db-4a9f-b5b0-028e3519fff5",
+              "employeeId": "second",
+              "actionType": "UPDATE",
+              "executionTime": "2021-03-05"
+            },
+            {
+              "actionId": "c77c7641-f383-4c98-8bef-b9c5c8b42926",
+              "employeeId": "fourth",
+              "actionType": "READ",
+              "executionTime": "2021-03-05"
+            }
+          ],
+          "products": [
+            {
+              "productId": "a228a035-3ff1-4f37-80bf-f2adaa76d938",
+              "description": "Кредитная заявка"
+            },
+            {
+              "productId": "88816ffa-b1ce-4dab-8710-7cd33187911c",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b654680f-b3a0-44aa-8e80-6683bdf8f68d",
+              "description": "Кредитная карта"
+            }
+          ]
+        },
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "222222",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-11"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+      ],
+      "values": {
+        "clientId": "444444"
+      }
+    }
+  ],
+  "provideDataForTestFindEmployeeActions": [
+    {
+      "storage": {
+        "a75ed09a-c658-439f-9300-9854b3791851": {
+          "id": "a75ed09a-c658-439f-9300-9854b3791851",
+          "clientId": "111111",
+          "actions": [
+            {
+              "actionId": "9dc4ec31-4770-439e-8f04-167aa75ccd98",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "34daf05b-9de6-4150-8064-84ab45239690",
+              "employeeId": "first",
+              "actionType": "READ",
+              "executionTime": "2021-03-02"
+            },
+            {
+              "actionId": "0dd74d56-087b-406b-9732-54ccc931cc93",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-08"
+            },
+            {
+              "actionId": "a4cb13cc-b10b-4c54-8d06-a7eb3ab9334a",
+              "employeeId": "second",
+              "actionType": "DELETE",
+              "executionTime": "2021-03-02"
+            }
+          ],
+          "products": [
+            {
+              "productId": "5a554bda-3701-4c91-a9bb-99417a9ca98f",
+              "description": "Кредитная карта"
+            },
+            {
+              "productId": "584ce23e-7e90-4b7a-86cd-756b9f707c4a",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "274887cc-d52f-4194-9c98-f197cb12cd7b",
+              "description": "Кредитная заявка"
+            }
+          ]
+        },
+        "7847e09d-faff-4889-996d-0ce10a39f508": {
+          "id": "7847e09d-faff-4889-996d-0ce10a39f508",
+          "clientId": "222222",
+          "actions": [
+            {
+              "actionId": "4ddd9e5c-1f88-405f-9580-a38e5688dc2f",
+              "employeeId": "first",
+              "actionType": "CREATE",
+              "executionTime": "2021-03-11"
+            },
+            {
+              "actionId": "d098d999-e229-4b2d-9c87-2804f3737a0f",
+              "employeeId": "first",
+              "actionType": "UPDATE",
+              "executionTime": "2021-02-24"
+            },
+            {
+              "actionId": "4619d192-07fa-41b5-801f-925f9ec66852",
+              "employeeId": "fourth",
+              "actionType": "CREATE",
+              "executionTime": "2021-02-26"
+            }
+          ],
+          "products": [
+            {
+              "productId": "7618a2f7-3252-4143-b3fa-1c401437c2fd",
+              "description": "Мастер счет"
+            },
+            {
+              "productId": "b4ff1b9f-8ed4-4e89-a188-df4c46600d65",
+              "description": "Бонусы"
+            }
+          ]
+        }
+      },
+      "expectedResult": [
+        {
+          "fourth": "CREATE",
+          "first": "CREATE",
+          "second": "DELETE"
+        }
+      ]
+    },
+    {
+      "storage": {
+        "c21d07e7-fe0f-4226-a974-da447217d949": {
+          "id": "c21d07e7-fe0f-4226-a974-da447217d949",
+          "clientId": "333333",
+          "actions": [
+          ],
+          "products": [
+          ]
+        }
+      },
+      "expectedResult": [
+        {}
+      ]
+    }
+  ]
+}

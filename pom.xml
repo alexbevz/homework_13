@@ -22,9 +22,12 @@
         <junit.version>4.13.1</junit.version>
         <junit-jupiter.version>5.7.0</junit-jupiter.version>
         <jackson.version>2.12.1</jackson.version>
+        <jackson-datatype.version>2.12.1</jackson-datatype.version>
+        <lombok.version>1.18.16</lombok.version>
     </properties>
 
     <dependencies>
+
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -52,7 +55,16 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>2.12.1</version>
+            <version>${jackson-datatype.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 </project>
