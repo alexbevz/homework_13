@@ -3,6 +3,7 @@ package ru.bevz;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import lombok.Data;
 
 import javax.swing.*;
 import java.io.File;
@@ -13,14 +14,27 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+@Data
 public class LoaderService {
 	private static final String ERROR_TITLE = "Ошибка";
 
-	private LoaderService() {
-
+	public static String getConfigPath() {
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		String path = "";
+		try {
+			path = Objects.requireNonNull(classLoader.getResource("config.properties")).getPath();
+		} catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(
+							null,
+							"Чтение по null!\nВернётся пустая строка!",
+							ERROR_TITLE,
+							JOptionPane.ERROR_MESSAGE
+			);
+		}
+		return path;
 	}
 
-	public static Map<UUID, Application> readStorageFromDB(String filepath) {
+	public Map<UUID, Application> readStorageFromDB(String filepath) {
 		File json = new File(filepath);
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.registerModule(new JavaTimeModule());
@@ -39,27 +53,11 @@ public class LoaderService {
 		return new HashMap<>();
 	}
 
-	public static String getDBPath() {
+	public String getDBPath() {
 		return getValueFromConfigByKey("db.path");
 	}
 
-	public static String getConfigPath() {
-		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		String path = "";
-		try {
-			path = Objects.requireNonNull(classLoader.getResource("config.properties")).getPath();
-		} catch (NullPointerException e) {
-			JOptionPane.showMessageDialog(
-							null,
-							"Чтение по null!\nВернётся пустая строка!",
-							ERROR_TITLE,
-							JOptionPane.ERROR_MESSAGE
-			);
-		}
-		return path;
-	}
-
-	public static String getValueFromConfigByKey(String key) {
+	public String getValueFromConfigByKey(String key) {
 		Properties property = new Properties();
 		String value = "";
 		try (FileInputStream fis = new FileInputStream(getConfigPath())) {

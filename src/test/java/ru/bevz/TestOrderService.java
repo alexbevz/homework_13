@@ -17,7 +17,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-//TODO: составить выборку для тестирования
 class TestOrderService {
 	private static final String ERROR_TITLE = "Ошибка";
 	private static final Map<String, List<DataTestOrderService>> data = readDataForTest();
@@ -34,7 +33,8 @@ class TestOrderService {
 	}
 
 	private static Map<String, List<DataTestOrderService>> readDataForTest() {
-		File json = new File(LoaderService.getValueFromConfigByKey("file-test.path"));
+		LoaderService loaderService = new LoaderService();
+		File json = new File(loaderService.getValueFromConfigByKey("file-test.path"));
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.registerModule(new JavaTimeModule());
 		try {
@@ -43,7 +43,7 @@ class TestOrderService {
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(
 							null,
-							"Файл отсутствует или нет прав доступа!\nВернётся new HashMap<>()!",
+							"Ошибка считывания данных!\nВернётся new HashMap<>()!",
 							ERROR_TITLE,
 							JOptionPane.ERROR_MESSAGE
 			);
@@ -55,20 +55,9 @@ class TestOrderService {
 		Stream<Arguments> stream = Stream.of();
 		for (DataTestOrderService data : data.get(name)) {
 			if (data.values == null) {
-				stream = Stream.concat(
-								stream,
-								Stream.of(Arguments.of(
-												data.storage,
-												data.expectedResult
-								)));
+				stream = Stream.concat(stream, Stream.of(Arguments.of(data.storage, data.expectedResult)));
 			} else {
-				stream = Stream.concat(
-								stream,
-								Stream.of(Arguments.of(
-												data.storage,
-												data.expectedResult,
-												data.values
-								)));
+				stream = Stream.concat(stream, Stream.of(Arguments.of(data.storage, data.expectedResult, data.values)));
 			}
 		}
 		return stream;
@@ -180,7 +169,8 @@ class TestOrderService {
 		OrderService orderService = new OrderService();
 		replaceStorage(orderService, storage);
 
-		List<String> listUUID = orderService.findApplicationsByActionType((ActionType) values.get("actionType"))
+		List<String> listUUID = orderService
+						.findApplicationsByActionType(ActionType.valueOf((String) values.get("actionType")))
 						.stream()
 						.map(x -> x.getId().toString())
 						.collect(Collectors.toList());
@@ -208,13 +198,13 @@ class TestOrderService {
 	@MethodSource("provideDataForTestFindClientsByActionAndProducts")
 	void testFindClientsByActionAndProducts(
 					HashMap<UUID, Application> storage,
-					Set<Object> expected
+					ArrayList<Object> expected
 	) {
 		OrderService orderService = new OrderService();
 		replaceStorage(orderService, storage);
 
 		Set<String> listClients = orderService.findClientsByActionAndProducts();
-		Assertions.assertEquals(expected, listClients);
+		Assertions.assertEquals(new HashSet<>(expected), listClients);
 	}
 
 	@ParameterizedTest
@@ -254,13 +244,18 @@ class TestOrderService {
 	@MethodSource("provideDataForTestFindEmployeeActions")
 	void testFindEmployeeActions(
 					HashMap<UUID, Application> storage,
-					HashMap<String, ActionType> expected
+					ArrayList<HashMap<String, String>> expected
 	) {
 		OrderService orderService = new OrderService();
 		replaceStorage(orderService, storage);
 
+		Map<String, ActionType> expectedMap = new HashMap<>();
+		for (String emp : expected.get(0).keySet()) {
+			expectedMap.put(emp, ActionType.valueOf(expected.get(0).get(emp)));
+		}
+
 		Map<String, ActionType> mapEmployeeActions = orderService.findEmployeeActions();
-		Assertions.assertEquals(expected, mapEmployeeActions);
+		Assertions.assertEquals(expectedMap, mapEmployeeActions);
 	}
 }
 

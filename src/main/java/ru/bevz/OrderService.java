@@ -10,7 +10,8 @@ public class OrderService {
 	private final Map<UUID, Application> storage;
 
 	public OrderService() {
-		storage = LoaderService.readStorageFromDB(LoaderService.getDBPath());
+		LoaderService loaderService = new LoaderService();
+		storage = loaderService.readStorageFromDB(loaderService.getDBPath());
 	}
 
 	//найти все заявки по clientId
